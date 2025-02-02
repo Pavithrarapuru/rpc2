@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #89a7db); 
+    color: #f6f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card {
+    width: 90%;
+    max-width: 470px;
+    height: 550px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff); 
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px 35px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 15px;
+    height: 50px;
+    border-radius: 30px;
+    flex: 1;
+    border: 2px solid transparent;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.search input:focus {
+    border-color: #00c6ff;
+    box-shadow: 0 0 8px rgba(0, 198, 255, 0.8);
+}
+
+.search button {
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.search button:hover {
+    background: #00c6ff;
+    transform: scale(1.1);
+}
+
+.search img {
+    width: 40px;
+    height: 40px;
+}
+
+.weather-icon {
+    width: 150px;
+    margin-top: 40px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.weather h1 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.weather h2 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: #ebfffc;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.col img:hover {
+    transform: rotate(20deg);
+}
+
+.humidity, .WindSpeed {
+    font-size: 27px;
+    margin-top: -6px;
+    color: #fff;
+}
